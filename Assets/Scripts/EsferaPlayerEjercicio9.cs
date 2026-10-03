@@ -11,6 +11,7 @@ public class EsferaPlayerEjercicio9 : MonoBehaviour
         // }
     }
 
+    /*
     void Update() {
         if (Input.GetKey(KeyCode.W)) {
             transform.Translate(0, speed, 0);
@@ -25,4 +26,22 @@ public class EsferaPlayerEjercicio9 : MonoBehaviour
             transform.Translate(speed, 0, 0);
         }
     }
+    */
+
+    void Update() {
+        float translation = speed * Time.deltaTime;
+        if (Input.GetKey(KeyCode.W)) {
+            transform.Translate(0, translation, 0);
+        }
+        if (Input.GetKey(KeyCode.S)) {
+            transform.Translate(0, -translation, 0);
+        }
+        if (Input.GetKey(KeyCode.A)) {
+            transform.Translate(-translation, 0, 0);
+        }
+        if (Input.GetKey(KeyCode.D)) {
+            transform.Translate(translation, 0, 0);
+        }
+    }
+    
 }
