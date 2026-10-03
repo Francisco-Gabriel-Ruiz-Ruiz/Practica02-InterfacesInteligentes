@@ -240,12 +240,12 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 145204059}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2121a7d4bf3aa9f40b29c4d9f015ed42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EsferaPlayerEjercicio9
-  speed: 1
+  speed: 1.1
 --- !u!114 &145204065
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -258,7 +258,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8cb073b46d7ee674582098de666d7aa6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Ej9EsferaPlayer
-  speed: 0
+  speed: 1.1
 --- !u!1 &530239656
 GameObject:
   m_ObjectHideFlags: 0
@@ -287,12 +287,12 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 530239656}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 75283abd8cfc3a8439d66ada617f6614, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CuboPlayerEjercicio9
-  speed: 1
+  speed: 1.1
 --- !u!65 &530239658
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -398,7 +398,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f157f79c5ccb76f4c9a8606adcdf159d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Ej9CuboPlayer
-  speed: 0
+  speed: 1.1
 --- !u!1 &1892818083
 GameObject:
   m_ObjectHideFlags: 0

@@ -372,7 +372,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CuboMovimientoEjercicio8
   moveDirection: {x: 0.001, y: 0, z: 0}
-  speed: 0
+  speed: 1.1
 --- !u!1 &2077444389
 GameObject:
   m_ObjectHideFlags: 0

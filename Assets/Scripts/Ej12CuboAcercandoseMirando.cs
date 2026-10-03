@@ -20,10 +20,10 @@ public class Ej12CuboAcercandoseMirando : MonoBehaviour
             return;
         }
         Vector3 targetPosition = targetTransform.position;
-        Vector3 moveDirection = new Vector3(targetPosition.x - transform.position.x, targetPosition.y - transform.position.y, targetPosition.z - transform.position.z);
+        Vector3 moveDirection = new Vector3(targetPosition.x - transform.position.x, 0, targetPosition.z - transform.position.z);
         Vector3 normalizedMoveDirection = moveDirection.normalized;
         float translation = speed * Time.deltaTime;
-        transform.Translate(normalizedMoveDirection.x * translation, normalizedMoveDirection.y * translation, normalizedMoveDirection.z * translation, Space.World);
+        transform.Translate(normalizedMoveDirection * translation, Space.World);
         transform.LookAt(targetTransform);
     }
 }
