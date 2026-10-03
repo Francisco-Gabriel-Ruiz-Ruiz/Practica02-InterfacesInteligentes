@@ -2,7 +2,7 @@ using System.Globalization;
 using System.ComponentModel;
 using UnityEngine;
 
-public class CampoVelocidadEjercicio6 : MonoBehaviour
+public class Ej6CampoVelocidad : MonoBehaviour
 {
     public float speed = 1;
 

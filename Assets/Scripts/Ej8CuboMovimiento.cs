@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UIElements;
 
-public class CuboMovimientoEjercicio8 : MonoBehaviour
+public class Ej8CuboMovimiento : MonoBehaviour
 {
     public Vector3 moveDirection;
     public float speed;

@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class DesplazamientoEjercicio5 : MonoBehaviour
+public class Ej5Desplazamiento : MonoBehaviour
 {
     public GameObject marcadorInvisible;
     public Vector3 desplazamiento;

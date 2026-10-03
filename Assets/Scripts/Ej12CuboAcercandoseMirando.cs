@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class CuboAcercandoseMirandoEjercicio12 : MonoBehaviour
+public class Ej12CuboAcercandoseMirando : MonoBehaviour
 {
     public GameObject target;
     public float speed;
