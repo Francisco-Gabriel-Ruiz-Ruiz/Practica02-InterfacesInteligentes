@@ -19,6 +19,6 @@ public class Ej8CuboMovimiento : MonoBehaviour
     }
 
     void Update() {
-        transform.Translate(moveDirection.x, moveDirection.y, moveDirection.z);
+        transform.Translate(moveDirection * speed);
     }
 }
