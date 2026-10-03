@@ -10,13 +10,13 @@ public class DesplazamientoEjercicio5 : MonoBehaviour
     void Start() {
         posicionOriginal = transform.position;
         // Establecer el desplazamiento por defecto
-        desplazamiento = marcadorInvisible.transform.position - this.transform.position;
+        desplazamiento = marcadorInvisible.transform.position - transform.position;
     }
 
     void Update() {
         if (Input.GetAxis("Jump") > 0) {
             // Aseguramos que no se desplaza infinitamente
-            this.transform.position = posicionOriginal + desplazamiento;
+            transform.position = posicionOriginal + desplazamiento;
         }
     }
 }
