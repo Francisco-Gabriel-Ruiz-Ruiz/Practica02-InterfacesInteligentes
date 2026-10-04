@@ -21,13 +21,13 @@ La metodología seguida para su realización es la siguiente:
 * Demostración en GIF:
 ![Demostración ejercicio 5](/GitImages/Ejercicio05-P02-II.gif)
 
-Vemos en el GIF cómo el objeto se desplaza a una posición determinada relativa a su origen al pulsar la barra espaciadora.
+Vemos en el GIF cómo los objetos se desplazan a unas posiciones determinadas relativas a su origen al pulsar la barra espaciadora.
 
 En cuanto al script y configuración:
-* Se configuró la escena con un objeto y un "marcador invisible" (un GameObject vacío) para calcular el vector de desplazamiento inicial de forma visual.
+* Se configuró la escena con tres objetos y tres "marcadores invisibles" (GameObjects vacíos) para calcular el vector de desplazamiento inicial de forma visual.
 * Se definió la variable pública `desplazamiento` de tipo `Vector3`.
 * Se utiliza `Input.GetAxis("Jump") > 0` para detectar si el usuario ha pulsado la barra espaciadora.
-* Al pulsar la tecla, la posición del objeto se actualiza sumando el vector de desplazamiento a su `posicionOriginal` calculada en el `Start()`.
+* Al pulsar la tecla, la posición de los objetos se actualizan sumando el vector de desplazamiento a su `posicionOriginal` calculada en el `Start()`.
 
 ## Ejercicio 6
 
@@ -42,7 +42,6 @@ En cuanto al script:
 * Se capturan los valores de los ejes mediante `Input.GetAxis("Horizontal")` e `Input.GetAxis("Vertical")`.
 * Se detecta qué tecla exacta ha sido pulsada usando `Input.GetKey(KeyCode.X)`.
 * Se calcula el producto de la velocidad por el eje correspondiente y se imprime en consola formateado a dos decimales con `CultureInfo.InvariantCulture` para usar el punto como separador. 
-* *(Nota: Se corrigió la lógica para asegurar que el cálculo refleja correctamente la multiplicación requerida en el enunciado)*.
 
 ## Ejercicio 7
 
@@ -53,7 +52,7 @@ Para este ejercicio no se ha desarrollado un script, ya que la tarea consistía 
 
 Metodología:
 * Se ha accedido a **Edit → Project Settings → Input Manager**.
-* Dentro de los *Axes*, se ha modificado o creado una nueva entrada llamada `disparo`.
+* Dentro de los *Axes*, se ha modificado la entrada llamada `Fire1`.
 * Se ha asignado la tecla `h` al campo *Alt Positive Button* sin sobrescribir la entrada principal (*Positive Button*). Esto permite que el eje reaccione tanto al control original como a esta nueva tecla de manera alternativa al llamar a `Input.GetAxis("disparo")` o `Input.GetButton("disparo")`.
 
 ## Ejercicio 8
@@ -110,7 +109,7 @@ Vemos en el GIF cómo el cubo persigue incansablemente a la esfera. Si alejamos 
 
 En cuanto al script:
 * Se obtiene la dirección restando la posición actual a la del objetivo: `targetPosition - transform.position`.
-* Para evitar que modifique su altura, **se fuerza la componente Y del vector de dirección a cero** antes de normalizar.
+* Para evitar que modifique su altura, se fuerza la componente Y del vector de dirección a cero antes de normalizar.
 * Se usa `.normalized` sobre el vector resultante. Esto es crucial: convierte el vector a magnitud 1, logrando que el objeto avance solo en base a su variable `speed` y no a la distancia que lo separa del objetivo.
 
 ## Ejercicio 12
@@ -123,7 +122,7 @@ A diferencia del ejercicio anterior, ahora el cubo rota físicamente para encara
 
 En cuanto al script:
 * Se emplea la función `transform.LookAt(targetTransform)` para que el eje Z local del cubo apunte siempre en dirección a la esfera.
-* Para el avance, se modificó el método `Translate` para que actúe sobre el espacio global usando `Space.World`. De lo contrario, al rotar el objeto y trasladarlo, los ejes locales se combinarían de forma indeseada con el vector de dirección calculado, desvirtuando la trayectoria.
+* Para el avance, se modificó el método `Translate` para que actúe sobre el espacio global usando `Space.World`.
 
 ## Ejercicio 13
 
