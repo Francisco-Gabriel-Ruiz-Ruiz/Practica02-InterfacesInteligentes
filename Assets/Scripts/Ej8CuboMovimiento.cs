@@ -19,6 +19,7 @@ public class Ej8CuboMovimiento : MonoBehaviour
     }
 
     void Update() {
-        transform.Translate(moveDirection * speed);
+        transform.Translate(moveDirection * speed, Space.Self); // Rotar el cubo para ver que cambia dirección
+        // transform.Translate(moveDirection * speed, Space.World); // Rotar el cubo para ver que mantiene dirección
     }
 }

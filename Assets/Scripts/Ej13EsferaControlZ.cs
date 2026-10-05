@@ -4,6 +4,7 @@ public class Ej13EsferaControlZ : MonoBehaviour
 {
     public float speed;
     public float turnSpeed;
+    public float rayLength;
 
     void Start() {
     
@@ -17,5 +18,6 @@ public class Ej13EsferaControlZ : MonoBehaviour
         // Avance
         Vector3 forwardMovement = transform.forward * speed * Time.deltaTime;
         transform.Translate(forwardMovement);
+        Debug.DrawRay(transform.position, transform.forward * rayLength, Color.red);
     }
 }
