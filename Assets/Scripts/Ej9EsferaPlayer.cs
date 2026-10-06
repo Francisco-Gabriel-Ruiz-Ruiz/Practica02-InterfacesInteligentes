@@ -12,17 +12,9 @@ public class Ej9EsferaPlayer : MonoBehaviour
     }
 
     void Update() {
-        if (Input.GetKey(KeyCode.W)) {
-            transform.Translate(0, speed, 0);
-        }
-        if (Input.GetKey(KeyCode.S)) {
-            transform.Translate(0, -speed, 0);
-        }
-        if (Input.GetKey(KeyCode.A)) {
-            transform.Translate(-speed, 0, 0);
-        }
-        if (Input.GetKey(KeyCode.D)) {
-            transform.Translate(speed, 0, 0);
-        }
+        float horizontalADAxis = Input.GetAxis("HorizontalAD");
+        transform.Translate(horizontalADAxis * speed, 0, 0);
+        float verticalWSAxis = Input.GetAxis("VerticalWS");
+        transform.Translate(0, verticalWSAxis * speed, 0);
     } 
 }

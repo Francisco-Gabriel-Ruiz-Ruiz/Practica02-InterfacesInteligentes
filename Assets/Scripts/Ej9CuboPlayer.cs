@@ -12,17 +12,9 @@ public class Ej9CuboPlayer : MonoBehaviour
     }
 
     void Update() {
-        if (Input.GetKey(KeyCode.UpArrow)) {
-            transform.Translate(0, speed, 0);
-        }
-        if (Input.GetKey(KeyCode.DownArrow)) {
-            transform.Translate(0, -speed, 0);
-        }
-        if (Input.GetKey(KeyCode.LeftArrow)) {
-            transform.Translate(-speed, 0, 0);
-        }
-        if (Input.GetKey(KeyCode.RightArrow)) {
-            transform.Translate(speed, 0, 0);
-        }
+        float horizontalArrowsAxis = Input.GetAxis("HorizontalArrows");
+        transform.Translate(horizontalArrowsAxis * speed, 0, 0);
+        float verticalArrowsAxis = Input.GetAxis("VerticalArrows");
+        transform.Translate(0, verticalArrowsAxis * speed, 0);
     }
 }

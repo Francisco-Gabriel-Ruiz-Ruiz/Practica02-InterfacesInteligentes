@@ -12,19 +12,11 @@ public class Ej10EsferaPlayer : MonoBehaviour
     }
 
     void Update() {
-        float translation = speed * Time.deltaTime;
-        if (Input.GetKey(KeyCode.W)) {
-            transform.Translate(0, translation, 0);
-        }
-        if (Input.GetKey(KeyCode.S)) {
-            transform.Translate(0, -translation, 0);
-        }
-        if (Input.GetKey(KeyCode.A)) {
-            transform.Translate(-translation, 0, 0);
-        }
-        if (Input.GetKey(KeyCode.D)) {
-            transform.Translate(translation, 0, 0);
-        }
+        float moveStep = speed * Time.deltaTime;
+        float horizontalMove = Input.GetAxis("HorizontalAD") * moveStep;
+        transform.Translate(horizontalMove * speed, 0, 0);
+        float verticalMove = Input.GetAxis("VerticalWS") * moveStep;
+        transform.Translate(0, verticalMove * speed, 0);
     }
     
 }
