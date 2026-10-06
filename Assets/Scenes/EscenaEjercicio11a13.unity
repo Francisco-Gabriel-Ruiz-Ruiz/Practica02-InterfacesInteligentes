@@ -154,6 +154,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Ej13EsferaControlZ
   speed: 1.1
   turnSpeed: 50
+  rayLength: 0
 --- !u!135 &108650401
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -241,7 +242,7 @@ Transform:
   m_GameObject: {fileID: 108650398}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.47229, y: 0.057740003, z: -2.96664}
+  m_LocalPosition: {x: 1.47229, y: 0, z: -2.96664}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
