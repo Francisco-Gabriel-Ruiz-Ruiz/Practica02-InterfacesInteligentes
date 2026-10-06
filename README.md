@@ -81,11 +81,18 @@ En cuanto al script y análisis:
 * Demostración en GIF:
 ![Demostración ejercicio 9](/GitImages/Ejercicio09-P02-II.gif)
 
-Vemos cómo el cubo se controla con las teclas de flechas direccionales y la esfera con las teclas W, A, S, D. 
+Vemos cómo el cubo se controla mediante los ejes personalizados del Input Manager para las flechas (`HorizontalArrows` y `VerticalArrows`) y la esfera mediante los ejes de letras (`HorizontalAD` y `VerticalWS`).
+
+He aquí capturas de los ejes personalizados:
+
+![Captura de pantalla del Input Manager de ejes horizontales](/GitImages/InputManagerHorizontalCaptura.png)
+
+![Captura de pantalla del Input Manager de ejes verticales](/GitImages/InputManagerVerticalCaptura.png)
 
 En cuanto a los scripts:
-* Se evalúa continuamente la pulsación de teclas mediante `Input.GetKey(...)`.
-* Se utiliza `transform.Translate` aplicando la variable de velocidad `speed` en los ejes $X$ o $Y$ correspondientes según la tecla pulsada, logrando un movimiento horizontal y vertical básico, aunque dependiente de los fotogramas (frames).
+
+* Se usan los valores devueltos por `Input.GetAxis(...)` utilizando los nombres de los ejes creados en el Input Manager (`HorizontalArrows`, `HorizontalAD`, `VerticalArrows`, `VerticalWS`).
+* Se utiliza `transform.Translate` aplicando la variable de velocidad `speed` multiplicada por el valor del eje correspondiente en los ejes $X$ o $Y$, logrando un movimiento horizontal y vertical básico dependiente de los fotogramas (frames).
 
 ## Ejercicio 10
 
@@ -93,11 +100,11 @@ En cuanto a los scripts:
 * Demostración en GIF:
 ![Demostración ejercicio 10](/GitImages/Ejercicio10-P02-II.gif)
 
-A simple vista el comportamiento es similar al Ejercicio 9, pero el movimiento ahora es suave y constante independientemente de la potencia del ordenador.
+A simple vista el comportamiento es similar al Ejercicio 9, pero el movimiento ahora es independiente de la potencia del ordenador.
 
 En cuanto a los scripts:
-* Se ha introducido `Time.deltaTime`. Se calcula `float translation = speed * Time.deltaTime;`.
-* Al multiplicar por este factor, la velocidad deja de medirse en "unidades por frame" y pasa a medirse en "unidades por segundo", escalando el movimiento al tiempo real transcurrido entre fotogramas.
+* Se ha introducido `Time.deltaTime`. Se calcula `float moveStep = speed * Time.deltaTime;`.
+* Al multiplicar por este factor, la velocidad deja de medirse en unidades por frame y pasa a medirse en unidades por segundo, escalando el movimiento al tiempo real transcurrido entre fotogramas.
 
 ## Ejercicio 11
 
